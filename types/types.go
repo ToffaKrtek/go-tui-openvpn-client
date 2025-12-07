@@ -9,6 +9,10 @@ type Item struct {
 	Text string `json:"text"`
 }
 
+func (i Item) Title() string       { return i.Name }
+func (i Item) Description() string { return i.Text }
+func (i Item) FilterValue() string { return i.Name }
+
 type Config struct {
 	Name     string `json:"name"`
 	LastUsed string `json:"lastused"`
